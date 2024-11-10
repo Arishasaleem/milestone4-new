@@ -1,0 +1,166 @@
+/* Universal reset for all elements */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    background: linear-gradient(135deg, #f1f2f6, #a3b2c0);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    padding: 20px;
+}
+
+h1 {
+    font-size: 3rem;
+    color: #2d3e50;
+    font-weight: 700;
+    margin-bottom: 40px;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
+    letter-spacing: 2px;
+}
+
+form {
+    background-color: #fff;
+    border-radius: 20px;
+    padding: 40px;
+    width: 100%;
+    max-width: 700px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+form:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 50px rgba(0, 0, 0, 0.2);
+}
+
+fieldset {
+    border: none;
+    margin-bottom: 30px;
+    position: relative;
+}
+
+legend {
+    font-size: 1.5rem;
+    color: #3f4d67;
+    font-weight: bold;
+    text-transform: uppercase;
+    padding: 0 1px;
+    background-color: #f2f6fa;
+    position: absolute;
+    top: -15px;
+    left: 15px;
+    font-family: 'Roboto', sans-serif;
+    letter-spacing: 1px;
+}
+
+label {
+    font-size: 1.1rem;
+    color: #666;
+    font-weight: 600;
+    margin-bottom: 8px;
+    display: block;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="tel"],
+textarea {
+    width: 100%;
+    padding: 15px;
+    margin-bottom: 20px;
+    border: 2px solid #ddd;
+    border-radius: 8px;
+    font-size: 1.1rem;
+    color: #333;
+    background-color: #f9f9f9;
+    transition: border 0.3s ease, background-color 0.3s ease;
+}
+
+input[type="text"]:focus,
+input[type="email"]:focus,
+input[type="tel"]:focus,
+textarea:focus {
+    border-color: #3498db;
+    background-color: #ffffff;
+    outline: none;
+}
+
+textarea {
+    resize: vertical;
+    min-height: 150px;
+}
+
+button {
+    background-color: #3498db;
+    color: #fff;
+    padding: 15px 25px;
+    border: none;
+    border-radius: 8px;
+    font-size: 1.2rem;
+    font-weight: bold;
+    cursor: pointer;
+    width: 100%;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+button:hover {
+    background-color: #2980b9;
+    transform: scale(1.05);
+}
+
+#resume-display {
+    width: 100%;
+    max-width: 700px;
+    margin-top: 50px;
+    padding: 30px;
+    background-color: #fff;
+    border-radius: 12px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    min-height: 300px;
+    font-size: 1.1rem;
+    line-height: 1.6;
+    color: #333;
+    font-family: 'Arial', sans-serif;
+    transition: box-shadow 0.3s ease;
+}
+
+#resume-display[contenteditable="true"] {
+    outline: none;
+    white-space: pre-wrap;
+    word-wrap: break-word;
+}
+
+#resume-display:empty::before {
+    content: "Your dynamic resume will appear here...";
+    color: #aaa;
+    font-style: italic;
+    text-align: center;
+    font-size: 1.2rem;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+    h1 {
+        font-size: 2.5rem;
+    }
+
+    form {
+        padding: 20px;
+    }
+
+    button {
+        padding: 12px 20px;
+    }
+
+    #resume-display {
+        padding: 20px;
+        min-height: 250px;
+    }
+}
